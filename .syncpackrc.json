@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/syncpack/dist/schema.json",
+  "lintFormatting": false,
+  "sortPackages": true,
+  "sortFirst": [
+    "name",
+    "private",
+    "description",
+    "version",
+    "author",
+    "license",
+    "exports",
+    "main",
+    "module",
+    "types",
+    "files",
+    "scripts"
+  ]
+}
