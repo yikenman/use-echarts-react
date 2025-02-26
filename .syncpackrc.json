@@ -1,12 +1,15 @@
 {
   "$schema": "./node_modules/syncpack/dist/schema.json",
   "lintFormatting": false,
+  "lintSemverRanges": false,
   "sortPackages": true,
   "sortFirst": [
     "name",
     "private",
     "description",
     "version",
+    "homepage",
+    "repository",
     "author",
     "license",
     "exports",

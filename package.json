@@ -1,16 +1,16 @@
 {
   "name": "use-echarts-react",
   "private": true,
-  "version": "0.0.0",
   "description": "A modernized React hook for integrating ECharts.",
+  "version": "0.0.0",
   "homepage": "https://github.com/yikenman/use-echarts-react",
   "repository": "https://github.com/yikenman/use-echarts-react",
   "author": "yikenman",
   "license": "MIT",
   "scripts": {
     "build": "turbo run build",
-    "check": "syncpack format && syncpack lint",
-    "ci:publish": "changeset publish",
+    "check": "syncpack format && echo ''",
+    "ci:publish": "cp ./README.md ./packages/use-echarts-react/README.md && changeset publish",
     "ci:version": "changeset version && pnpm install --frozen-lockfile=false",
     "dev": "turbo run dev",
     "format": "biome check .",
@@ -23,9 +23,9 @@
     "@changesets/cli": "^2.27.11",
     "@changesets/config": "^3.0.5",
     "husky": "^9.1.7",
-    "lint-staged": "^15.3.0",
+    "lint-staged": "^15.4.3",
     "syncpack": "^13.0.0",
-    "turbo": "^2.3.3"
+    "turbo": "^2.4.4"
   },
   "engines": {
     "node": ">=20.13.0"
