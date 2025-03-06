@@ -2,7 +2,7 @@
   "name": "use-echarts-react",
   "private": false,
   "description": "A modernized React hook for integrating ECharts.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/yikenman/use-echarts-react",
   "repository": "https://github.com/yikenman/use-echarts-react",
   "author": "yikenman",
