@@ -93,7 +93,7 @@ export const createProxyEChartsInstance = (instance?: EChartsType | null, impera
     return null as any;
   }
   return new Proxy(instance, {
-    get(target, p) {
+    get(target, p, receiver) {
       if (FORBIT_PROP_SET.has(p)) {
         console.warn(`Prop '${String(p)}' is now managed by useECharts. This method will be no longer applicable.`);
         return undefined;
@@ -102,16 +102,15 @@ export const createProxyEChartsInstance = (instance?: EChartsType | null, impera
         console.warn(`Method '${String(p)}' is now managed by useECharts. This method will be no longer applicable.`);
         return noop;
       }
-      return target[p as keyof typeof target];
+      return Reflect.get(target, p, receiver);
     },
-    set(target, p, value) {
+    set(target, p, value, receiver) {
       if (READONLY_PROP_SET.has(p)) {
         console.warn(`Prop '${String(p)}' is protected and cannot be modified.`);
         // not throw error.
         return true;
       }
-      target[p as keyof typeof target] = value;
-      return true;
+      return Reflect.set(target, p, value, receiver);
     }
   });
 };
