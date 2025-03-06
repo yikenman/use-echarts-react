@@ -312,8 +312,11 @@ describe('utils', () => {
       jest.spyOn(console, 'warn').mockImplementation(jest.fn);
 
       mockEChartsInstance = {
+        id: `${Math.random()}`,
         setOption: jest.fn(),
-        getOption: jest.fn(),
+        getOption: jest.fn(function () {
+          return this.id;
+        }),
         resize: jest.fn(),
         isDisposed: jest.fn().mockReturnValue(false)
       } as unknown as EChartsType;
@@ -326,8 +329,7 @@ describe('utils', () => {
 
     it('should allow accessing allowed properties', () => {
       const proxy = createProxyEChartsInstance(mockEChartsInstance);
-
-      proxy.getOption();
+      expect(proxy.getOption()).toBe(mockEChartsInstance.id);
       expect(mockEChartsInstance.getOption).toHaveBeenCalled();
     });
 
