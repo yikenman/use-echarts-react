@@ -1,15 +1,15 @@
-export { useECharts } from './use-echarts';
-export { useEChartsEvent } from './use-echarts-event';
 export type {
-  ECBasicOption,
-  DeclarativeModeOptType,
-  DeclarativeModeInitOptionsType,
   DeclarativeEChartsRef,
-  ImperativeModeOptType,
-  ImperativeModeInitOptionsType,
-  ImperativeEChartsRef,
+  DeclarativeModeInitOptionsType,
+  DeclarativeModeOptType,
+  ECBasicOption,
   EChartsRef,
   EventType,
-  QueryType,
-  HandlerType
+  HandlerType,
+  ImperativeEChartsRef,
+  ImperativeModeInitOptionsType,
+  ImperativeModeOptType,
+  QueryType
 } from './types';
+export { useECharts } from './use-echarts';
+export { useEChartsEvent } from './use-echarts-event';

@@ -1,4 +1,4 @@
-import { type EChartsType, connect, disconnect } from 'echarts';
+import { connect, disconnect, type EChartsType } from 'echarts';
 import {
   FORBIT_METHOD_LIST,
   FORBIT_PROP_LIST,
