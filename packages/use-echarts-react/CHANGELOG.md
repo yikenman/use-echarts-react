@@ -1,5 +1,11 @@
 # use-echarts-react
 
+## 1.0.2
+
+### Patch Changes
+
+- cae373b: chore: bump version
+
 ## 1.0.1
 
 ### Patch Changes
