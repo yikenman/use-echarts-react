@@ -19,13 +19,13 @@
     "test": "turbo run test:ci"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@changesets/cli": "^2.27.11",
+    "@biomejs/biome": "^2.2.0",
+    "@changesets/cli": "^2.29.5",
     "@changesets/config": "^3.0.5",
     "husky": "^9.1.7",
-    "lint-staged": "^15.4.3",
-    "syncpack": "^13.0.0",
-    "turbo": "^2.4.4"
+    "lint-staged": "^16.1.5",
+    "syncpack": "^13.0.4",
+    "turbo": "^2.5.5"
   },
   "engines": {
     "node": ">=20.13.0"
